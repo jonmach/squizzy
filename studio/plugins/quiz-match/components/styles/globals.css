@@ -1,0 +1,11 @@
+@import 'part:@sanity/base/theme/variables-style';
+
+.heading, .p {
+  margin: 0;
+}
+
+.p {
+  font-size: 1.3em;
+}
+
+

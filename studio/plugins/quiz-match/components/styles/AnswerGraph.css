@@ -1,0 +1,95 @@
+@import 'part:@sanity/base/theme/variables-style';
+
+:root {
+  --quiz-red: #FF4C54;
+  --quiz-yellow: #ffdd33;
+  --quiz-blue: #3385FF;
+  --quiz-green: #00A84D;
+  --quiz-purple: #B04CFF;
+}
+
+.root {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  @media screen and (max-width: 768px) {
+   min-height: 200px;
+  }
+}
+
+.choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 85px;
+  margin: 3rem 1rem 0;
+  @media screen and (max-width: 768px) {
+    min-width: 3rem;
+  }
+}
+
+.column {
+  position: relative;
+  border-radius: var(--border-radius-base);
+  color: var(--white);
+  opacity: 1;
+  width: 100%;
+  min-height: 2%;
+  max-height: 400px;
+}
+
+.isCorrect {
+  position: absolute;
+  top: -3rem;
+  left: calc((100% - 3rem) / 2);
+  display: flex;
+  font-size: 3rem;
+}
+
+.symbol > svg {
+  height: 2rem;
+}
+
+/* choice 1 - Circle */
+.choice[data-choice="0"] {
+  @nest & .column {
+    background: var(--quiz-red);
+  }
+
+  @nest & svg {
+    fill: var(--quiz-red);
+  }
+}
+
+/* choice 2 - Star */
+.choice[data-choice="1"] {
+  @nest & .column {
+    background: var(--quiz-green);
+  }
+  @nest & svg {
+    fill: var(--quiz-green);
+  }
+}
+
+/* choice 3 - Triangle */
+.choice[data-choice="2"] {
+  @nest & .column {
+    background: var(--quiz-blue);
+  }
+  @nest & svg {
+    fill: var(--quiz-blue);
+  }
+}
+
+/* choice 4 - Square */
+.choice[data-choice="3"] {
+  @nest & .column {
+    background: var(--quiz-purple);
+  }
+  @nest & svg {
+    fill: var(--quiz-purple);
+  }
+}

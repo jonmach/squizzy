@@ -1,0 +1,12 @@
+.qrCode {
+  max-height: 250px;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  @nest & svg {
+    height: auto;
+    flex: 1;
+    width: 100%;
+    padding: 1rem;
+  }
+}

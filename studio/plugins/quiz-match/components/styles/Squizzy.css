@@ -1,0 +1,40 @@
+.squizzy {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  max-height: 300px;
+  height: 100%;
+  padding: 1rem;
+
+  @nest & svg {
+    width: 100%;
+  }
+}
+
+#body {
+  transform-origin: 50% 50%;
+  animation: float 5s infinite ease-in-out forwards;
+}
+
+#bodyBackground {
+  transform-origin: 50% 50%;
+  animation: background 3s 0.5s infinite ease-in-out forwards;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(5px) rotate(10deg) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) rotate(10deg) scale(1);
+  }
+}
+
+@keyframes background {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(0.95) rotate(-10deg)
+  }
+}

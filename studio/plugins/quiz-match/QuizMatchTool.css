@@ -1,0 +1,54 @@
+@import 'part:@sanity/base/theme/variables-style';
+
+:root {
+  --border-style: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  color: var(--text-color);
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-width: 300px;
+  width: 100%;
+  border-right: var(--border-style);
+  overflow-y: auto;
+}
+
+.listItem {
+  padding: var(--small-padding);
+  @nest & a {
+    color: inherit;
+    text-decoration: inherit;
+    border-bottom: var(--border-style);
+  }
+}
+
+.listItem:last-child {
+  border-bottom: 0;
+}
+
+.document {
+  margin: 0;
+  padding: 0 10px;
+  max-width: 66%;
+}
+
+
+.welcome {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--medium-padding);
+}
+
+.welcomeMessage {
+  margin: 0;
+}

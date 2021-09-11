@@ -1,0 +1,23 @@
+{
+  "name": "squizzy-serverless",
+  "version": "0.0.1",
+  "description": "Squizzy backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=0.10.3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sanity/client": "^0.142.6",
+    "micro": "^9.3.4",
+    "micro-cors": "^0.1.1",
+    "micro-query": "^0.3.0",
+    "nanoid": "^2.1.7",
+    "now": "^16.7.0"
+  }
+}

@@ -1,0 +1,68 @@
+@import 'part:@sanity/base/theme/variables-style';
+
+.root {
+  display: flex;
+  justify-content: center;
+}
+
+.countdownWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @media screen and (max-width: 650px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 1rem;
+    @nest & div {
+      text-align: center;
+    }
+  }
+}
+
+.countdownSquizzy {
+  max-height: 270px;
+  transform: scale(1.15);
+  @media screen and (max-width: 650px) {
+    max-height: 100px;
+  }
+}
+
+.countdown {
+  padding: 0 var(--medium-padding);
+}
+
+.seconds {
+  font-size: 9rem;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1;
+  @media screen and (max-width: 650px) {
+    font-size: 3rem;
+  }
+}
+
+.red {
+  color: var(--state-danger-color);
+}
+
+.answers {
+  font-size: 5rem;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1;
+  @media screen and (max-width: 650px) {
+    font-size: 3rem;
+  }
+}
+
+.label {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  @media screen and (max-width: 650px) {
+    font-size: 1rem;
+  }
+}

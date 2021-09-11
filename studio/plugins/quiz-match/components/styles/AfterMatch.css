@@ -1,0 +1,9 @@
+:root {
+  --border-style: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+

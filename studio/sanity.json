@@ -1,0 +1,34 @@
+{
+  "root": true,
+  "project": {
+    "name": "squizzy"
+  },
+  "api": {
+    "projectId": "puj7p168",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "quiz-match",
+    "asset-source-unsplash"
+  ],
+  "env": {
+    "development": {
+      "plugins": ["@sanity/vision"]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema.js"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "./squizzyTheme.css"
+    }
+  ]
+}
